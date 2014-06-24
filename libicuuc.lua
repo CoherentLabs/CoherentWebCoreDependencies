@@ -52,7 +52,12 @@ project 'libicuuc'
 		'U_DISABLE_RENAMING'
 	}
 	
-	includedirs {
+	libdirs {
+		'../../Build/%{cfg.platform}/%{cfg.shortname}'
+	}
+	
+	links {
+		'icudt'
 	}
 
 	if os.is('windows') then
