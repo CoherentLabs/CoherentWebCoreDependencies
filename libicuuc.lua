@@ -1,4 +1,4 @@
-project 'ICUCommon'
+project 'libicuuc'
 	configuration '*Static'
 		kind 'StaticLib'
 	configuration 'not *Static'
@@ -48,16 +48,13 @@ project 'ICUCommon'
 	
 	defines {
 		'U_ATTRIBUTE_DEPRECATED=',
-		'U_COMMON_IMPLEMENTATION'	
+		'U_COMMON_IMPLEMENTATION',
+		'U_DISABLE_RENAMING'
 	}
 	
 	includedirs {
 	}
-	
-	links {
-		'ICUStubData'
-	}
-	
+
 	if os.is('windows') then
 		defines {
 			'_CRT_SECURE_NO_DEPRECATE',

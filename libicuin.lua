@@ -1,4 +1,4 @@
-project 'ICUI18N'
+project 'libicuin'
 	configuration '*Static'
 		kind 'StaticLib'
 	configuration 'not *Static'
@@ -47,7 +47,8 @@ project 'ICUI18N'
 	
 	defines {
 		'U_ATTRIBUTE_DEPRECATED=',
-		'U_I18N_IMPLEMENTATION'
+		'U_I18N_IMPLEMENTATION',
+		'U_DISABLE_RENAMING'
 	}
 	
 	includedirs {
@@ -56,7 +57,7 @@ project 'ICUI18N'
 	}
 	
 	links {
-		'ICUCommon'
+		'libicuuc'
 	}
 	
 	if os.is('windows') then
