@@ -1,7 +1,8 @@
+copy CFLite.lua CFLite\CFLite.lua /Y
 copy curl.lua curl-7.36.0\curl.lua /Y
 copy icu_stubdata.lua icu4c-53_1\source\icu_stubdata.lua /Y
-copy icu_common.lua icu4c-53_1\source\icu_common.lua /Y
-copy icu_i18n.lua icu4c-53_1\source\icu_i18n.lua /Y
+copy libicuuc.lua icu4c-53_1\source\libicuuc.lua /Y
+copy libicuin.lua icu4c-53_1\source\libicuin.lua /Y
 copy libiconv.lua libiconv-1.14\libiconv.lua /Y
 copy libpng.lua libpng-1.6.10\libpng.lua /Y
 copy libssh.lua libssh2-1.4.3\libssh.lua /Y
@@ -10,4 +11,5 @@ copy libxslt.lua libxslt-1.1.28\libxslt.lua /Y
 copy openssl_crypto.lua openssl-1.0.1g\openssl_crypto.lua /Y
 copy openssl_ssl.lua openssl-1.0.1g\openssl_ssl.lua /Y
 copy sqlite.lua sqlite-amalgamation-3080403\sqlite.lua /Y
+copy pthread.lua pthreads\pthread.lua /Y
 copy zlib.lua zlib-1.2.8\zlib.lua /Y
