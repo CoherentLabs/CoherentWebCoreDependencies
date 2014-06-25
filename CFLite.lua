@@ -32,11 +32,20 @@ project 'CFLite'
 		}
 	configuration '*'
 		defines {
-			'__i386__',
 			'CFLITELIB_EXPORTS',
 			'__STDC_LIMIT_MACROS',
 			'CF_BUILDING_CF',
 			'U_DISABLE_RENAMING'
+		}
+	
+	configuration 'x32'
+		defines {
+			'__i386__'
+		}
+		
+	configuration 'x64'
+		defines {
+			'__x86_64__'
 		}
 	
 	includedirs {
