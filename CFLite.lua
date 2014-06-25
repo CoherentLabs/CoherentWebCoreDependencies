@@ -8,7 +8,7 @@ project 'CFLite'
 	uuid '63F4572B-7FBB-44AE-8E80-7B52CA8535DD'
 
 	flags {
-		'Unicode'
+		'Unicode', 'Symbols'
 	}
 	
 	configuration 'Release*'
@@ -30,14 +30,6 @@ project 'CFLite'
 		defines {
 			'NDEBUG'
 		}
-	configuration '*'
-		defines {
-			'CFLITELIB_EXPORTS',
-			'__STDC_LIMIT_MACROS',
-			'CF_BUILDING_CF',
-			'U_DISABLE_RENAMING'
-		}
-	
 	configuration 'x32'
 		defines {
 			'__i386__'
@@ -47,7 +39,14 @@ project 'CFLite'
 		defines {
 			'__x86_64__'
 		}
-	
+	configuration '*'
+		defines {
+			'CFLITELIB_EXPORTS',
+			'__STDC_LIMIT_MACROS',
+			'CF_BUILDING_CF',
+			'U_DISABLE_RENAMING'
+		}
+		
 	includedirs {
 		'./include',
 		'../icu4c-53_1/source/common',

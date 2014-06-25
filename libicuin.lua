@@ -8,7 +8,7 @@ project 'libicuin'
 	uuid '2B2D0C5A-A65C-475B-B694-D277CF08FD4A'
 
 	flags {
-		--'Unicode'
+		'Symbols'
 	}
 	
 	configuration 'Release*'

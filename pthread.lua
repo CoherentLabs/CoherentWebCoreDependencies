@@ -8,7 +8,7 @@ project 'pthread'
 	uuid '73E9D062-C94E-4BAF-AD98-E03E56BA69F0'
 
 	flags {
-		'Unicode'
+		'Unicode', 'Symbols'
 	}
 	
 	configuration 'Release*'

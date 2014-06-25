@@ -8,7 +8,7 @@ project 'libicuuc'
 	uuid 'F11F305B-7761-4836-9F59-DF0700C38218'
 
 	flags {
-		--'Unicode'
+		'Symbols'
 	}
 	
 	configuration 'Release*'
