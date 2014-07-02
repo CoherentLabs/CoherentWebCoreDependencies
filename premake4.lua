@@ -16,3 +16,21 @@ solution 'CoherentWebCoreDependencies'
 	include 'sqlite-amalgamation-3080403/sqlite.lua'
 	include 'pthreads/pthread.lua'
 	include 'zlib-1.2.8/zlib.lua'
+	
+	external "cjpeg-static"
+		location "libjpeg-turbo"
+		uuid "9844CFC0-4C33-4263-9059-D3FFF4919348"
+		kind "StaticLib"
+		language "C++"
+		
+	external "jpeg-static"
+		location "libjpeg-turbo"
+		uuid "87EDBECD-763E-4231-A588-9529F414001E"
+		kind "StaticLib"
+		language "C++"
+		
+	external "simd"
+		location "libjpeg-turbo/simd"
+		uuid "53E75EB5-55C8-47B8-83AD-AB7A07F69818"
+		kind "StaticLib"
+		language "C++"
