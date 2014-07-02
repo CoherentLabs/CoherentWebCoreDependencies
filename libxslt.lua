@@ -6,10 +6,6 @@ project 'LibXSLT'
 	configuration '*'
 	language 'C++'
 	uuid 'D01D5582-8004-4D6C-9D43-9150EF44061E'
-
-	flags {
-		--'Unicode'
-	}
 	
 	configuration 'Release*'
 		flags {
@@ -30,7 +26,10 @@ project 'LibXSLT'
 	
 	configuration 'Debug*'
 		defines {
-			'_DEBUG',
+			'_DEBUG', 'DEBUG',
+		}
+		flags {
+			"Symbols"
 		}
 	configuration 'not Debug*'
 		defines {

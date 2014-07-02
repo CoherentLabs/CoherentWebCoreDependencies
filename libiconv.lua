@@ -34,6 +34,9 @@ project 'LibICONV'
 		defines {
 			'_DEBUG',
 		}
+		flags {
+			"Symbols"
+		}
 	configuration 'not Debug*'
 		defines {
 			'NDEBUG'

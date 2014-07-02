@@ -76,6 +76,9 @@ project 'LibXML2'
 		defines {
 			'_DEBUG',
 		}
+		flags {
+			"Symbols"
+		}
 	configuration 'not Debug*'
 		defines {
 			'NDEBUG'

@@ -54,6 +54,9 @@ project 'ZLib'
 	
 	configuration 'Debug*'
 		defines { '_DEBUG' }
+		flags {
+			"Symbols"
+		}
 	configuration 'not Debug*'
 		defines {
 			'NDEBUG'

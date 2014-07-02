@@ -26,19 +26,21 @@ project 'pthread'
 	
 	configuration 'Debug*'
 		defines { '_DEBUG' }
+		flags {
+			'Symbols'
+		}
 	configuration 'not Debug*'
 		defines {
 			'NDEBUG'
+		}
+		flags  {
+			'EnableSSE2', 'OptimizeSpeed', 'SEH', 'NoFramePointer'
 		}
 	configuration '*'
 		defines {
 			'__CLEANUP_C'
 		}
-	
-	flags  {
-		'EnableSSE2', 'OptimizeSpeed', 'SEH', 'NoFramePointer'
-	}
-	
+			
 	includedirs {
 		'.',
 	}
@@ -52,9 +54,14 @@ project 'pthread'
 			'ws2_32'
 		}
 		buildoptions
-        {
-			'/wd4996', '/Ot', '/Ob1', '/Ox', '/Oi','/Oy', '/GT', '/GL'
+		{
+			'/wd4996'
 		}
+		configuration 'not Debug*'
+			buildoptions
+			{
+				'/Ot', '/Ob1', '/Ox', '/Oi','/Oy', '/GT', '/GL'
+			}
 	end
 
 	

@@ -11,6 +11,11 @@ project 'OpenSSL_SSL'
 		'Unicode'
 	}
 	
+	configuration 'Debug*'
+		flags {
+			"Symbols"
+		}
+	
 	configuration 'Release*'
 		flags {
 			'Optimize'

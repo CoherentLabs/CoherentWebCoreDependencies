@@ -642,6 +642,9 @@ project 'OpenSSL_Crypto'
 		defines {
 			'_DEBUG',
 		}
+		flags {
+			"Symbols"
+		}
 	configuration 'not Debug*'
 		defines {
 			'NDEBUG'

@@ -32,6 +32,9 @@ project 'SQLite'
 		defines {
 			'_DEBUG',
 		}
+		flags {
+			"Symbols"
+		}
 	configuration 'not Debug*'
 		defines {
 			'NDEBUG'

@@ -35,6 +35,9 @@ project 'LibCURL'
 		defines {
 			'_DEBUG',
 		}
+		flags {
+			"Symbols"
+		}
 	configuration 'not Debug*'
 		defines {
 			'NDEBUG'

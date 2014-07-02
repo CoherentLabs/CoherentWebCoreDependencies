@@ -34,6 +34,9 @@ project 'LibSSH'
 			'_DEBUG',
 			'LIBSSH2DEBUG'
 		}
+		flags {
+			"Symbols"
+		}
 	configuration 'not Debug*'
 		defines {
 			'NDEBUG'

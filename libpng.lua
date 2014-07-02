@@ -53,6 +53,9 @@ project 'LibPNG'
 			'_DEBUG',
 			'PNG_DEBUG',
 		}
+		flags {
+			"Symbols"
+		}
 	configuration 'not Debug*'
 		defines {
 			'NDEBUG'
