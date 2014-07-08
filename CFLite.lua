@@ -50,7 +50,7 @@ project 'CFLite'
 	includedirs {
 		'./include',
 		'../icu4c-53_1/source/common',
-		'../pthreads/include/pthreads',
+		'../pthreads/',
 		'../icu4c-53_1/source/i18n',
 		'./include/c99',
 		'./include/CoreFoundation/GNUCompatibility',
