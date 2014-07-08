@@ -1099,7 +1099,7 @@ void __CFInitialize(void) {
 #endif
 
         {
-            CFIndex idx, cnt;
+            CFIndex idx = 0, cnt = 0;
             char **args;
 #if DEPLOYMENT_TARGET_MACOSX || DEPLOYMENT_TARGET_EMBEDDED || DEPLOYMENT_TARGET_EMBEDDED_MINI
             args = *_NSGetArgv();
