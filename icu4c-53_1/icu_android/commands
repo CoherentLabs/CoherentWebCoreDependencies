@@ -1,0 +1,24 @@
+#!/bin/sh
+
+export ICU_SOURCES=/home/stoyan/repo/CoherentWebCoreDependencies/icu4c-53_1
+export ANDROIDVER=17
+export AR=/usr/bin/ar
+export BASE=/home/stoyan/repo/CoherentWebCoreDependencies/icu4c-53_1
+export HOST_ICU=$BASE/icu_android
+export ICU_CROSS_BUILD=$BASE/icu_linux
+export NDK_ROOT=/home/stoyan/AndroidDevelopment/android-ndk-r10
+export NDK_TOOLCHAIN_BIN=$NDK_ROOT/toolchains/x86-4.8/prebuilt/linux-x86_64/bin
+export SDK_ROOT=$NDK_ROOT/platforms/android-17/arch-x86
+export CPPFLAGS="-I$SDK_ROOT/usr/include/ -I$NDK_ROOT/sources/cxx-stl/gnu-libstdc++/4.8/include/ -I$NDK_ROOT/sources/cxx-stl/gnu-libstdc++/4.8/libs/x86/include/ \
+-O3 -fno-short-wchar -fvisibility=hidden -DU_USING_ICU_NAMESPACE=1 -fno-short-enums \
+-DU_HAVE_NL_LANGINFO_CODESET=0 -D__STDC_INT64__ -DU_TIMEZONE=0 \
+-DUCONFIG_NO_LEGACY_CONVERSION=1"
+export LDFLAGS="--sysroot=$SDK_ROOT -lc -lgnustl_shared -L$NDK_ROOT/sources/cxx-stl/gnu-libstdc++/4.8/libs/x86/"
+
+export PATH=$PATH:$NDK_ROOT/toolchains/x86-4.8/prebuilt/linux-x86_64/bin
+
+$ICU_SOURCES/source/configure --with-cross-build=$ICU_CROSS_BUILD \
+--enable-extras=no --enable-strict=no \
+--enable-tests=no --enable-samples=no --enable-tools=no --disable-renaming \
+--host=i686-linux-android --prefix=$PWD/icu_build
+
