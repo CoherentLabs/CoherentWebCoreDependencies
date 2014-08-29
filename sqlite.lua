@@ -71,6 +71,11 @@ project 'SQLite'
 			linkoptions {
 				'/def:sqlite3.def'
 			}
+		configuration 'not Debug*'
+			buildoptions
+			{
+				'/Zo'
+			}
 		configuration '*'
 	end
 	

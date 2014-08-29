@@ -60,7 +60,7 @@ project 'pthread'
 		configuration 'not Debug*'
 			buildoptions
 			{
-				'/Ot', '/Ob1', '/Ox', '/Oi','/Oy', '/GT', '/GL'
+				'/Ot', '/Ob1', '/Ox', '/Oi','/Oy', '/GT', '/GL', '/Zo'
 			}
 	end
 

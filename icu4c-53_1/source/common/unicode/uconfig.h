@@ -90,6 +90,9 @@
 #define U_DISABLE_RENAMING 0
 #endif
 
+#define U_ICU_ENTRY_POINT_RENAME(x) x ## _coherent
+
+
 /**
  * \def U_NO_DEFAULT_INCLUDE_UTF_HEADERS
  * Determines whether utypes.h includes utf.h, utf8.h, utf16.h and utf_old.h.
@@ -161,6 +164,8 @@
 #ifndef U_DEFAULT_SHOW_DRAFT
 #define U_DEFAULT_SHOW_DRAFT 1
 #endif
+
+#define U_LIB_SUFFIX_C_NAME coherent
 
 /*===========================================================================*/
 /* Custom icu entry point renaming                                           */

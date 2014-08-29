@@ -55,7 +55,6 @@ U_CDECL_BEGIN
 #include "pkgtypes.h"
 U_CDECL_END
 
-
 static void loadLists(UPKGOptions *o, UErrorCode *status);
 
 static int32_t pkg_executeOptions(UPKGOptions *o);

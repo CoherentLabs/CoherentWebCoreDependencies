@@ -70,6 +70,11 @@ project 'LibXSLT'
 			}
 		
 			linkoptions { '/def:win32/libxslt.def' }
+		configuration 'not Debug*'
+			buildoptions
+			{
+				'/Zo'
+			}
 		configuration '*'
 	end
 	

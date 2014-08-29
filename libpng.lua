@@ -90,6 +90,11 @@ project 'LibPNG'
 		prebuildcommands {
 			'copy "scripts\\pnglibconf.h.prebuilt" "pnglibconf.h" /Y'
 		}
+		configuration 'not Debug*'
+			buildoptions
+			{
+				'/Zo'
+			}
 	end
 	
 	

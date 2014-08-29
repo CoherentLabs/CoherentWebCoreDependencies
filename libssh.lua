@@ -76,6 +76,11 @@ project 'LibSSH'
 				'OpenSSL_Crypto', -- libeay32
 				'ZLib'
 			}
+		configuration 'not Debug*'
+			buildoptions
+			{
+				'/Zo'
+			}
 		configuration '*'
 	end
 	

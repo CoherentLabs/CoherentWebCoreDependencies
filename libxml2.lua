@@ -119,6 +119,11 @@ project 'LibXML2'
 		configuration 'not *Static'
 			links {
 			}
+		configuration 'not Debug*'
+			buildoptions
+			{
+				'/Zo'
+			}
 		configuration '*'
 	end
 	

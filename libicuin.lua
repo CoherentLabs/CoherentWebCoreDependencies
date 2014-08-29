@@ -48,7 +48,6 @@ project 'libicuin'
 	defines {
 		'U_ATTRIBUTE_DEPRECATED=',
 		'U_I18N_IMPLEMENTATION',
-		'U_DISABLE_RENAMING'
 	}
 	
 	includedirs {
@@ -74,6 +73,11 @@ project 'libicuin'
 		configuration 'x64'
 			defines {
 				'WIN64'
+			}
+		configuration 'not Debug*'
+			buildoptions
+			{
+				'/Zo'
 			}
 		configuration '*'
 	end

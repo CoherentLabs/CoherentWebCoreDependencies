@@ -74,6 +74,11 @@ project 'LibICONV'
 			'copy "..\\CoherentThirdPartyFiles\\localcharset_win32.h" "include\\localcharset.h" /Y',
 			'copy "..\\CoherentThirdPartyFiles\\config_win32.h" "include\\config.h" /Y',
 		}
+		configuration 'not Debug*'
+			buildoptions
+			{
+				'/Zo'
+			}
 	end
 	
 	

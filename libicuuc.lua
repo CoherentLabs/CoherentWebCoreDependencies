@@ -49,7 +49,6 @@ project 'libicuuc'
 	defines {
 		'U_ATTRIBUTE_DEPRECATED=',
 		'U_COMMON_IMPLEMENTATION',
-		'U_DISABLE_RENAMING'
 	}
 	
 	libdirs {
@@ -74,6 +73,11 @@ project 'libicuuc'
 		configuration 'x64'
 			defines {
 				'WIN64'
+			}
+		configuration 'not Debug*'
+			buildoptions
+			{
+				'/Zo'
 			}
 		configuration '*'
 	end

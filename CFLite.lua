@@ -81,6 +81,11 @@ project 'CFLite'
 		buildoptions {
 			'/wd4996', '/TP'
 		}
+		configuration 'not Debug*'
+			buildoptions
+			{
+				'/Zo'
+			}
 	end
 
 	

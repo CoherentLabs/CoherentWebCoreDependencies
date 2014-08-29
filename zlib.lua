@@ -79,7 +79,10 @@ project 'ZLib'
 		prebuildcommands {
 			'echo f | xcopy zconf.h.in zconf.h /Y'
 		}
+		configuration 'not Debug*'
+			buildoptions
+			{
+				'/Zo'
+			}
 	end
-	
-	
 	

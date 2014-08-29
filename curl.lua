@@ -90,6 +90,11 @@ project 'LibCURL'
 			'ws2_32',
 			'Wldap32'
 		}
+		configuration 'not Debug*'
+			buildoptions
+			{
+				'/Zo'
+			}
 	end
 	
 	

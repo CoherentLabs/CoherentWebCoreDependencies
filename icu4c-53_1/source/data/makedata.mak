@@ -11,10 +11,11 @@
 ##############################################################################
 # Keep the following in sync with the version - see common/unicode/uvernum.h
 U_ICUDATA_NAME=icudt53
+U_ICUDATA_COHERENT_NAME=icudtcoherent53
 ##############################################################################
 U_ICUDATA_ENDIAN_SUFFIX=l
 UNICODE_VERSION=6.3
-ICU_LIB_TARGET=$(DLL_OUTPUT)\$(U_ICUDATA_NAME).dll
+ICU_LIB_TARGET=$(DLL_OUTPUT)\icudtcoherent53.dll
 
 #  ICUMAKE
 #     Must be provided by whoever runs this makefile.
@@ -467,7 +468,7 @@ SPREP_FILES = $(SPREP_SOURCE:.txt=.spp)
 
 # Common defines for both ways of building ICU's data library.
 COMMON_ICUDATA_DEPENDENCIES="$(ICUPBIN)\pkgdata.exe" "$(ICUTMP)\icudata.res" "$(ICUP)\source\stubdata\stubdatabuilt.txt"
-COMMON_ICUDATA_ARGUMENTS=-f -e $(U_ICUDATA_NAME) -v $(ICU_PACKAGE_MODE) -c -p $(ICUPKG) -T "$(ICUTMP)" -L $(U_ICUDATA_NAME) -d "$(ICUBLD_PKG)" -s .
+COMMON_ICUDATA_ARGUMENTS=-f -e $(U_ICUDATA_COHERENT_NAME) -v $(ICU_PACKAGE_MODE) -c -p $(ICUPKG) -T "$(ICUTMP)" -L $(U_ICUDATA_COHERENT_NAME) -d "$(ICUBLD_PKG)" -s .
 
 #############################################################################
 #
@@ -597,8 +598,8 @@ icu4j-data-install :
 	cd "$(ICUBLD_PKG)"
 	"$(ICUPBIN)\icupkg" -x * --list "$(ICUDATA_SOURCE_ARCHIVE)" > "$(ICUTMP)\icudata.lst"
 	"$(ICUPBIN)\pkgdata" $(COMMON_ICUDATA_ARGUMENTS) "$(ICUTMP)\icudata.lst"
-	copy "$(U_ICUDATA_NAME).dll" "$(DLL_OUTPUT)"
-	-@erase "$(U_ICUDATA_NAME).dll"
+	copy "$(U_ICUDATA_COHERENT_NAME).dll" "$(DLL_OUTPUT)"
+	-@erase "$(U_ICUDATA_COHERENT_NAME).dll"
 	copy "$(ICUTMP)\$(ICUPKG).dat" "$(ICUOUT)\$(U_ICUDATA_NAME)$(U_ICUDATA_ENDIAN_SUFFIX).dat"
 	-@erase "$(ICUTMP)\$(ICUPKG).dat"
 !ELSE

@@ -192,5 +192,10 @@ project 'OpenSSL_SSL'
 		
 		configuration 'not *Static'
 			linkoptions { '/def:ms/SSLEAY32.def' }
+		configuration 'not Debug*'
+			buildoptions
+			{
+				'/Zo'
+			}
 		configuration '*'
 	end

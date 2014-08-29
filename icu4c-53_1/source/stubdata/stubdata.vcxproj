@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -26,21 +26,25 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -104,6 +108,7 @@
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <CompileAs>Default</CompileAs>
+      <AdditionalOptions>/Zo %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;STUBDATA_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -113,7 +118,7 @@
       <Command>echo "File with stubdata build time, used as a dependency to trigger fresh data build, since stubdata dll will overwrite the real one." &gt; "$(ProjectDir)stubdatabuilt.txt"</Command>
     </PreLinkEvent>
     <Link>
-      <OutputFile>..\..\bin\icudt53.dll</OutputFile>
+      <OutputFile>..\..\bin\icudtcoherent53.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <ProgramDatabaseFile>.\x86\Release\icudt.pdb</ProgramDatabaseFile>
@@ -160,7 +165,7 @@
       <Command>echo "File with stubdata build time, used as a dependency to trigger fresh data build, since stubdata dll will overwrite the real one." &gt; "$(ProjectDir)stubdatabuilt.txt"</Command>
     </PreLinkEvent>
     <Link>
-      <OutputFile>..\..\bin\icudt53.dll</OutputFile>
+      <OutputFile>..\..\bin\icudtcoherent53.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <ProgramDatabaseFile>.\x86\Debug/icudt.pdb</ProgramDatabaseFile>
       <NoEntryPoint>true</NoEntryPoint>
@@ -198,6 +203,7 @@
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <CompileAs>Default</CompileAs>
+      <AdditionalOptions>/Zo %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;STUBDATA_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -207,7 +213,7 @@
       <Command>echo "File with stubdata build time, used as a dependency to trigger fresh data build, since stubdata dll will overwrite the real one." &gt; "$(ProjectDir)stubdatabuilt.txt"</Command>
     </PreLinkEvent>
     <Link>
-      <OutputFile>..\..\bin64\icudt53.dll</OutputFile>
+      <OutputFile>..\..\bin64\icudtcoherent53.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <ProgramDatabaseFile>.\x64\Release\icudt.pdb</ProgramDatabaseFile>
@@ -252,7 +258,7 @@
       <Command>echo "File with stubdata build time, used as a dependency to trigger fresh data build, since stubdata dll will overwrite the real one." &gt; "$(ProjectDir)stubdatabuilt.txt"</Command>
     </PreLinkEvent>
     <Link>
-      <OutputFile>..\..\bin64\icudt53.dll</OutputFile>
+      <OutputFile>..\..\bin64\icudtcoherent53.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <ProgramDatabaseFile>.\x64\Debug/icudt.pdb</ProgramDatabaseFile>
       <NoEntryPoint>true</NoEntryPoint>

@@ -851,6 +851,11 @@ project 'OpenSSL_Crypto'
 		
 		configuration 'not *Static'
 			linkoptions { '/def:ms/LIBEAY32.def' }
+		configuration 'not Debug*'
+			buildoptions
+			{
+				'/Zo'
+			}
 		configuration '*'
 	end
 	
