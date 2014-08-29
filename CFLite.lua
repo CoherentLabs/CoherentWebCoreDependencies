@@ -44,7 +44,6 @@ project 'CFLite'
 			'CFLITELIB_EXPORTS',
 			'__STDC_LIMIT_MACROS',
 			'CF_BUILDING_CF',
-			'U_DISABLE_RENAMING'
 		}
 		
 	includedirs {
