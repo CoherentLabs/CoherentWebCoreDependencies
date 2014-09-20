@@ -1,0 +1,5 @@
+APP_ABI := x86
+APP_PLATFORM := android-17
+APP_STL := gnustl_shared
+NDK_TOOLCHAIN_VERSION := 4.8
+NDK_MODULE_PATH := ../

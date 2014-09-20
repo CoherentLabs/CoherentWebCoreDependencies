@@ -15,6 +15,9 @@
 #ifndef __UCONFIG_H__
 #define __UCONFIG_H__
 
+#ifndef U_DISABLE_RENAMING
+#define U_DISABLE_RENAMING 1
+#endif
 
 /*!
  * \file
