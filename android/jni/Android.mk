@@ -11,9 +11,10 @@ LOCAL_SRC_FILES := test.cpp
 
 LOCAL_LDLIBS    := -llog -lGLESv2
 $(LOCAL_PATH)/test.cpp: \
-	icu-data \
 	icuuc \
-	libxml2 \
+	icui18n \
+	png \
+	xml2 \
 #
 
 
@@ -21,4 +22,6 @@ include $(BUILD_SHARED_LIBRARY)
 
 $(call import-module, icu4c-53_1)
 $(call import-module, libxml2-2.9.1)
+$(call import-module, libjpeg-turbo)
+$(call import-module, libpng-1.6.10)
 

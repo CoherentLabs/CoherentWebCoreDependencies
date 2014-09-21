@@ -100,7 +100,7 @@ src_files += \
         vzone.cpp       fphdlimp.cpp fpositer.cpp\
         locdspnm.cpp    \
         alphaindex.cpp  bocsu.cpp    decfmtst.cpp \
-        smpdtfst.cpp    smpdtfst.h   tzfmt.cpp \
+        smpdtfst.cpp    tzfmt.cpp \
         tzgnames.cpp    tznames.cpp  tznames_impl.cpp \
         udateintervalformat.cpp  upluralrules.cpp
 
@@ -126,45 +126,5 @@ LOCAL_SHARED_LIBRARIES += libicuuc $(optional_android_logging_libraries)
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libicui18n
 LOCAL_ADDITIONAL_DEPENDENCIES += $(LOCAL_PATH)/Android.mk
-# Use "-include" to not fail apps_only build.
--include abi/cpp/use_rtti.mk
--include external/stlport/libstlport.mk
+LOCAL_CPP_FEATURES += rtti
 include $(BUILD_SHARED_LIBRARY)
-
-
-#
-# Build for the host.
-#
-
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES += $(src_files)
-LOCAL_C_INCLUDES += $(c_includes) $(optional_android_logging_includes)
-LOCAL_CFLAGS += $(local_cflags)
-LOCAL_SHARED_LIBRARIES += libicuuc-host $(optional_android_logging_libraries)
-LOCAL_LDLIBS += -lm -lpthread
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE := libicui18n-host
-LOCAL_ADDITIONAL_DEPENDENCIES += $(LOCAL_PATH)/Android.mk
-LOCAL_MULTILIB := both
-include $(BUILD_HOST_SHARED_LIBRARY)
-
-#
-# Build as a static library against the NDK
-#
-
-include $(CLEAR_VARS)
-LOCAL_SDK_VERSION := 9
-LOCAL_NDK_STL_VARIANT := stlport_static
-LOCAL_SRC_FILES += $(src_files)
-LOCAL_C_INCLUDES += $(c_includes) $(optional_android_logging_includes)
-LOCAL_SHARED_LIBRARIES += $(optional_android_logging_libraries)
-LOCAL_STATIC_LIBRARIES += libicuuc_static
-LOCAL_EXPORT_C_INCLUDES += $(LOCAL_PATH)
-LOCAL_CPP_FEATURES := rtti
-LOCAL_CFLAGS += $(local_cflags) -DPIC -fPIC -frtti
-# Using -Os over -O3 actually cuts down the final executable size by a few dozen kilobytes
-LOCAL_CFLAGS += -Os
-LOCAL_EXPORT_CFLAGS += -DU_STATIC_IMPLEMENTATION=1
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE := libicui18n_static
-include $(BUILD_STATIC_LIBRARY)

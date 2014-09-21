@@ -73,9 +73,6 @@ DISABLED_WARNING_FLAGS := \
 	-Wno-pointer-sign \
 	-Wno-sign-compare
 
-# For the device
-# =====================================================
-
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := $(common_SRC_FILES)
