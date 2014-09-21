@@ -1,3 +1,11 @@
 *.o
 *.o.d
+Debug
+Release
+android/obj
+android/libs
+Build
+BuildIntermediate
+*.obj
+*.tlog
 

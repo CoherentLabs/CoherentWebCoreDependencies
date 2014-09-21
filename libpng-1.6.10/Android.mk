@@ -38,15 +38,6 @@ my_src_files_arm := \
 
 common_CFLAGS := -std=gnu89 #-fvisibility=hidden ## -fomit-frame-pointer
 
-ifeq ($(HOST_OS),windows)
-	ifeq ($(USE_MINGW),)
-#		Case where we're building windows but not under linux (so it must be cygwin)
-#		In this case, gcc cygwin doesn't recognize -fvisibility=hidden
-		$(info libpng: Ignoring gcc flag $(common_CFLAGS) on Cygwin)
-	common_CFLAGS :=
-	endif
-endif
-
 common_C_INCLUDES +=
 
 common_COPY_HEADERS_TO := libpng
