@@ -7,6 +7,7 @@ XML2_ROOT = $(abspath $(LOCAL_PATH))
 # and the host (as a static library for tools to use).
 
 common_SRC_FILES := \
+    $(XML2_ROOT)/buf.c \
     $(XML2_ROOT)/SAX.c \
     $(XML2_ROOT)/entities.c \
     $(XML2_ROOT)/encoding.c \
