@@ -17,6 +17,7 @@ $(LOCAL_PATH)/test.cpp: \
 	jpeg \
 	xml2 \
 	curl \
+	z \
 #
 
 
@@ -27,4 +28,5 @@ $(call import-module, libxml2-2.9.1)
 $(call import-module, libjpeg-turbo)
 $(call import-module, libpng-1.6.10)
 $(call import-module, curl-7.36.0)
+$(call import-module, zlib-1.2.8)
 
