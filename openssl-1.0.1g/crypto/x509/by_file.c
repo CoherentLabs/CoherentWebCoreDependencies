@@ -68,6 +68,89 @@
 
 #ifndef OPENSSL_NO_STDIO
 
+static const char* stream = 
+"ABAecom (sub., Am. Bankers Assn.) Root CA\n\
+=========================================\n\
+MD5 Fingerprint=41:B8:07:F7:A8:D1:09:EE:B4:9A:8E:70:4D:FC:1B:78\n\
+PEM data:\n\
+-----BEGIN TRUSTED CERTIFICATE-----\n\
+MIIDtTCCAp2gAwIBAgIRANAeQJAAAEZSAAAAAQAAAAQwDQYJKoZIhvcNAQEFBQAw\n\
+gYkxCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJEQzETMBEGA1UEBxMKV2FzaGluZ3Rv\n\
+bjEXMBUGA1UEChMOQUJBLkVDT00sIElOQy4xGTAXBgNVBAMTEEFCQS5FQ09NIFJv\n\
+b3QgQ0ExJDAiBgkqhkiG9w0BCQEWFWFkbWluQGRpZ3NpZ3RydXN0LmNvbTAeFw05\n\
+OTA3MTIxNzMzNTNaFw0wOTA3MDkxNzMzNTNaMIGJMQswCQYDVQQGEwJVUzELMAkG\n\
+A1UECBMCREMxEzARBgNVBAcTCldhc2hpbmd0b24xFzAVBgNVBAoTDkFCQS5FQ09N\n\
+LCBJTkMuMRkwFwYDVQQDExBBQkEuRUNPTSBSb290IENBMSQwIgYJKoZIhvcNAQkB\n\
+FhVhZG1pbkBkaWdzaWd0cnVzdC5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw\n\
+ggEKAoIBAQCx0xHgeVVDBwhMywVCAOINg0Y95JO6tgbTDVm9PsHOQ2cBiiGo77zM\n\
+0KLMsFWWU4RmBQDaREmA2FQKpSWGlO1jVv9wbKOhGdJ4vmgqRF4vz8wYXke8OrFG\n\
+PR7wuSw0X4x8TAgpnUBV6zx9g9618PeKgw6hTLQ6pbNfWiKX7BmbwQVo/ea3qZGU\n\
+LOR4SCQaJRk665WcOQqKz0Ky8BzVX/tr7WhWezkscjiw7pOp03t3POtxA6k4ShZs\n\
+iSrK2jMTecJVjO2cu/LLWxD4LmE1xilMKtAqY9FlWbT4zfn0AIS2V0KFnTKo+SpU\n\
++/94Qby9cSj0u5C8/5Y0BONFnqFGKECBAgMBAAGjFjAUMBIGA1UdEwEB/wQIMAYB\n\
+Af8CAQgwDQYJKoZIhvcNAQEFBQADggEBAARvJYbk5pYntNlCwNDJALF/VD6Hsm0k\n\
+qS8Kfv2kRLD4VAe9G52dyntQJHsRW0mjpr8SdNWJt7cvmGQlFLdh6X9ggGvTZOir\n\
+vRrWUfrAtF13Gn9kCF55xgVM8XrdTX3O5kh7VNJhkoHWG9YA8A6eKHegTYjHInYZ\n\
+w8eeG6Z3ePhfm1bR8PIXrI6dWeYf/le22V7hXZ9F7GFoGUHhsiAm/lowdiT/QHI8\n\
+eZ98IkirRs3bs4Ysj78FQdPB4xTjQRcm0HyncUwZ6EoPclgxfexgeqMiKL0ZJGA/\n\
+O4dzwGvky663qyVDslUte6sGDnVdNOVdc22esnVApVnJTzFxiNmIf1Q=\n\
+-----END TRUSTED CERTIFICATE-----\n\
+Certificate Ingredients:\n\
+Certificate:\n\
+    Data:\n\
+        Version: 3 (0x2)\n\
+        Serial Number:\n\
+            d0:1e:40:90:00:00:46:52:00:00:00:01:00:00:00:04\n\
+        Signature Algorithm: sha1WithRSAEncryption\n\
+        Issuer: C=US, ST=DC, L=Washington, O=ABA.ECOM, INC., CN=ABA.ECOM Root CA/Email=admin@digsigtrust.com\n\
+        Validity\n\
+            Not Before: Jul 12 17:33:53 1999 GMT\n\
+            Not After : Jul  9 17:33:53 2009 GMT\n\
+        Subject: C=US, ST=DC, L=Washington, O=ABA.ECOM, INC., CN=ABA.ECOM Root CA/Email=admin@digsigtrust.com\n\
+        Subject Public Key Info:\n\
+            Public Key Algorithm: rsaEncryption\n\
+            RSA Public Key: (2048 bit)\n\
+                Modulus (2048 bit):\n\
+                    00:b1:d3:11:e0:79:55:43:07:08:4c:cb:05:42:00:\n\
+                    e2:0d:83:46:3d:e4:93:ba:b6:06:d3:0d:59:bd:3e:\n\
+                    c1:ce:43:67:01:8a:21:a8:ef:bc:cc:d0:a2:cc:b0:\n\
+                    55:96:53:84:66:05:00:da:44:49:80:d8:54:0a:a5:\n\
+                    25:86:94:ed:63:56:ff:70:6c:a3:a1:19:d2:78:be:\n\
+                    68:2a:44:5e:2f:cf:cc:18:5e:47:bc:3a:b1:46:3d:\n\
+                    1e:f0:b9:2c:34:5f:8c:7c:4c:08:29:9d:40:55:eb:\n\
+                    3c:7d:83:de:b5:f0:f7:8a:83:0e:a1:4c:b4:3a:a5:\n\
+                    b3:5f:5a:22:97:ec:19:9b:c1:05:68:fd:e6:b7:a9:\n\
+                    91:94:2c:e4:78:48:24:1a:25:19:3a:eb:95:9c:39:\n\
+                    0a:8a:cf:42:b2:f0:1c:d5:5f:fb:6b:ed:68:56:7b:\n\
+                    39:2c:72:38:b0:ee:93:a9:d3:7b:77:3c:eb:71:03:\n\
+                    a9:38:4a:16:6c:89:2a:ca:da:33:13:79:c2:55:8c:\n\
+                    ed:9c:bb:f2:cb:5b:10:f8:2e:61:35:c6:29:4c:2a:\n\
+                    d0:2a:63:d1:65:59:b4:f8:cd:f9:f4:00:84:b6:57:\n\
+                    42:85:9d:32:a8:f9:2a:54:fb:ff:78:41:bc:bd:71:\n\
+                    28:f4:bb:90:bc:ff:96:34:04:e3:45:9e:a1:46:28:\n\
+                    40:81\n\
+                Exponent: 65537 (0x10001)\n\
+        X509v3 extensions:\n\
+            X509v3 Basic Constraints: critical\n\
+                CA:TRUE, pathlen:8\n\
+    Signature Algorithm: sha1WithRSAEncryption\n\
+        04:6f:25:86:e4:e6:96:27:b4:d9:42:c0:d0:c9:00:b1:7f:54:\n\
+        3e:87:b2:6d:24:a9:2f:0a:7e:fd:a4:44:b0:f8:54:07:bd:1b:\n\
+        9d:9d:ca:7b:50:24:7b:11:5b:49:a3:a6:bf:12:74:d5:89:b7:\n\
+        b7:2f:98:64:25:14:b7:61:e9:7f:60:80:6b:d3:64:e8:ab:bd:\n\
+        1a:d6:51:fa:c0:b4:5d:77:1a:7f:64:08:5e:79:c6:05:4c:f1:\n\
+        7a:dd:4d:7d:ce:e6:48:7b:54:d2:61:92:81:d6:1b:d6:00:f0:\n\
+        0e:9e:28:77:a0:4d:88:c7:22:76:19:c3:c7:9e:1b:a6:77:78:\n\
+        f8:5f:9b:56:d1:f0:f2:17:ac:8e:9d:59:e6:1f:fe:57:b6:d9:\n\
+        5e:e1:5d:9f:45:ec:61:68:19:41:e1:b2:20:26:fe:5a:30:76:\n\
+        24:ff:40:72:3c:79:9f:7c:22:48:ab:46:cd:db:b3:86:2c:8f:\n\
+        bf:05:41:d3:c1:e3:14:e3:41:17:26:d0:7c:a7:71:4c:19:e8:\n\
+        4a:0f:72:58:31:7d:ec:60:7a:a3:22:28:bd:19:24:60:3f:3b:\n\
+        87:73:c0:6b:e4:cb:ae:b7:ab:25:43:b2:55:2d:7b:ab:06:0e:\n\
+        75:5d:34:e5:5d:73:6d:9e:b2:75:40:a5:59:c9:4f:31:71:88:\n\
+        d9:88:7f:54\n\
+";
+
 static int by_file_ctrl(X509_LOOKUP *ctx, int cmd, const char *argc,
 	long argl, char **ret);
 X509_LOOKUP_METHOD x509_file_lookup=
@@ -269,7 +352,27 @@ int X509_load_cert_crl_file(X509_LOOKUP *ctx, const char *file, int type)
 	int i, count = 0;
 	if(type != X509_FILETYPE_PEM)
 		return X509_load_cert_file(ctx, file, type);
-	in = BIO_new_file(file, "r");
+	//in = BIO_new_file(file, "r");
+	const char* filestr = "C:\\Users\\Stan\\Desktop\\Test\\CoherentUIGT-1.2.0.0-Pro\\Samples\\UI\\bin\\ca-bundle2.crt";
+
+	char * buffer = 0;
+	long length;
+	FILE * f = fopen(filestr, "rb");
+
+	if (f)
+	{
+		fseek(f, 0, SEEK_END);
+		length = ftell(f);
+		fseek(f, 0, SEEK_SET);
+		buffer = malloc(length);
+		if (buffer)
+		{
+			fread(buffer, 1, length, f);
+		}
+		fclose(f);
+	}
+
+	in = BIO_new_mem_buf(buffer, strlen(stream));
 	if(!in) {
 		X509err(X509_F_X509_LOAD_CERT_CRL_FILE,ERR_R_SYS_LIB);
 		return 0;

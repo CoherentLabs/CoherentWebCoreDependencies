@@ -1765,6 +1765,7 @@ ossl_connect_step1(struct connectdata *conn,
   if(data->set.str[STRING_SSL_CAFILE] || data->set.str[STRING_SSL_CAPATH]) {
     /* tell SSL where to find CA certificates that are used to verify
        the servers certificate. */
+	//data->set.str[STRING_SSL_CAFILE] = "C:\\Users\\Stan\\Desktop\\Test\\CoherentUIGT-1.2.0.0-Pro\\Samples\\UI\\bin\\ca-bundle.crt";
     if(!SSL_CTX_load_verify_locations(connssl->ctx,
                                        data->set.str[STRING_SSL_CAFILE],
                                        data->set.str[STRING_SSL_CAPATH])) {
